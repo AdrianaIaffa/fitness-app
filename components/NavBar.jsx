@@ -10,7 +10,7 @@ export default function NavBar() {
     async function fetchUserData() {
       try {
         const response = await fetch(
-          `http://localhost:3006/users/${session?.user?.email}`
+          `${process.env.NEXTAUTH_URL}/users/${session?.user?.email}`
         );
         const data = await response.json();
         setUserData(data);
