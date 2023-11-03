@@ -93,8 +93,8 @@ export default function WorkoutPage() {
             </div>
             <ul className="text-right">
               {workouts?.map((workout) => (
-                <div className="singleworkout">
-                  <li key={workout?._id}>
+                <div className="singleworkout" key={workout?._id}>
+                  <li>
                     <a onClick={() => openModal(workout)}>
                       {workout.workoutName}
                     </a>
