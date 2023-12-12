@@ -39,7 +39,8 @@ This was a group project and I was in charge of the fitness tracker.
 
 **Wireframe/Planning**<br>
 
-Since this was a group project, we came up with a list of things that we wanted our app to do and how we would split the workload
+Since this was a group project, we came up with a list of things that we wanted our app to do and how we would split the workload. We decided that as a standard we would merge every morning and every evening and we developed a pretty nice system to keep up to date
+with each other. We use slack as well as zoom to stay in touch and every morning we would have a quick stand up were we discussed what we wanted to work on on that day.
 
 Pages: Login/Sign-up Page: Create a profile and log in using GoogleAuth.
 
