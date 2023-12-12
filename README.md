@@ -82,7 +82,50 @@ Also I had so many issues with all my modals becasuse they were forms and I want
 
 **Day5**<br>
 I struggled to visualise the modals and changed the UI quite a lot throughout the days. I also decided that it would be good to have a calendar so you could track when a workout had been performed. Added the styling for my workout page, as we wanted each category to be a launchpad for each. We decided to deploy in the afternoon.
-We had quite a few issues with our deployment and couldn't deploy our project fully as google auth is not working. We haven't been able to resolve this issue since deploying the project and we have been trying to deploy with other platforms without much luck
+
+    // Calculate the day of the week for the 1st day of the month
+      const dayOfWeek = startDate.getDay();
+
+    // Create blank cells for days before the 1st day of the month
+    for (let i = 0; i < dayOfWeek; i++) {
+      currentWeek.push(
+        <div key={`blank-${i}`} className="day blank">
+          {/* Empty cell */}
+        </div>
+      );
+    }
+
+    for (let day = 1; day <= endDate.getDate(); day++) {
+      const currentDate = new Date(currentYear, currentMonth, day);
+
+      const workout = workouts.find((w) =>
+        isSameDay(new Date(w.workoutDate), currentDate)
+      );
+
+      currentWeek.push(
+        <div
+          key={day}
+          className={`day ${workout ? "has-workout" : ""}`}
+          onClick={() => handleDayClick(workout)} // Add this onClick handler
+        >
+          {currentDate.getDate()}
+        </div>
+      );
+
+      if (currentDate.getDay() === 0 || day === endDate.getDate()) {
+        weeks.push(
+          <div key={weeks.length} className="week">
+            {currentWeek}
+          </div>
+        );
+        currentWeek = [];
+      }
+    }
+
+    return weeks;
+    };
+
+We had quite a few issues with our deployment and couldn't deploy our project fully as google auth is not working. We haven't been able to resolve this issue since deploying the project and we have been trying to deploy with other platforms without much luck.
 ![tracktive](https://github.com/AdrianaIaffa/fitness-app/assets/100214999/160d7d48-f1af-45f0-9679-5d201d73b1a1)
 ![screenshot_2023-12-05_at_17 15 26](https://github.com/AdrianaIaffa/fitness-app/assets/100214999/9e574ab0-2268-462e-87f6-12267a658280)
 ![screenshot_2023-12-05_at_17 15 41](https://github.com/AdrianaIaffa/fitness-app/assets/100214999/1c4205f5-3216-4c81-885c-753c959f32b4)
