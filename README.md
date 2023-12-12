@@ -21,7 +21,7 @@ Unfotunately having issues with the deployment.
 https://tracktive.netlify.app/
 
 You can find a link for the backend here<br>
-https://github.com/AdrianaIaffa/bookclub-backend
+https://github.com/AdrianaIaffa/fitness-app-backend
 
 **Technologies Used**<br>
 
