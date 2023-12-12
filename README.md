@@ -20,6 +20,9 @@ Unfotunately having issues with the deployment.
 
 https://tracktive.netlify.app/
 
+You can find a link for the backend here<br>
+https://github.com/AdrianaIaffa/bookclub-backend
+
 **Technologies Used**<br>
 
 -trackTive is built using the MERN (MongoDB, Express, React, Node.js) stack for a robust and user-friendly experience. <br>
